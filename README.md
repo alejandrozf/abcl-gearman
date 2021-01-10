@@ -1,5 +1,5 @@
 # abcl-gearman
-### Alejandro Zamora Fonseca <ale2014.zamora@gmail.com>_
+### Alejandro Zamora Fonseca <ale2014.zamora@gmail.com>
 
 A simple implementation of a Gearman client & worker using https://github.com/gearman/java-service with
 ABCL(https://abcl.org/) FFI calls.
