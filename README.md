@@ -14,9 +14,11 @@ Useful as a example for use ABCL to load external Java library.
 
 - CL-USER> (ql:quickload :abcl-gearman)
 
-- CL-USER> (create-running-worker "reverse")
+- CL-USER> (in-package :abcl-gearman)
 
-- CL-USER> (submit-job "reverse")
+- ABCL-GEARMAN> (create-running-worker "reverse")
+
+- ABCL-GEARMAN> (submit-job "reverse")
 
 ## License
 
