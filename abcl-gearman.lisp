@@ -8,7 +8,9 @@
 (defun create-running-worker (function-name
                               &key (hostname "localhost") (port 4730)
                                 (worker-function (lambda (function data callback)
-                                                   (print (java:jarray-ref data 0)))))
+                                                   (declare (ignore function callback))
+                                                   (print "Worker returning ...")
+                                                   data)))
   "Creates a worker linked to a server in HOST and PORT"
   (let* ((gearman (java:jstatic "createGearman" "org.gearman.Gearman"))
          (worker (java:jcall "createGearmanWorker" gearman))
